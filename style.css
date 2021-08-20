@@ -1,0 +1,236 @@
+
+/*media cuiry au debut de mon code, cad responsivity 
+la resposivité mieux a la fin */
+/*
+@media only screen and (max-width : 600px) {
+    .card{
+        width: 90%;
+        height: 55%; /*pour iphon ou smart phone 2*/
+   /* }
+}*/
+@media only screen and (min-width : 600px) {
+    .card{
+        width: 70%;
+        height: 40%; /*pour ipad*/
+    }
+}
+
+
+@media only screen and (min-width : 800px) {
+    .card{
+        width: 30%;
+        height: 55%; /*pour pc ou mac*/
+    }
+}
+
+/*smart phon plus 1 */ 
+/*@media (max-width : 300px) {
+    .card{
+        width: 77%;
+        height: 40%; 
+    }
+}
+
+
+@media (min-width : 300px) {
+    .card{
+        width: 70%;
+        height: 40%; /*smrtphon2*/
+   /*meme principe pour logo }/*
+}*/
+
+body{
+    margin: 0;/*pour eliménié la marge sur la page html
+     en couleur*/
+}
+
+.main{
+width: 100%; /* toute la largeur */
+height: 95vh; /* tt la hauteur de la page il faut mettre */
+/*background-color: blue; /*arrier plan bleu*/
+
+/*
+border: solid 10px red; /*bordeur tri continu gras rouge*//*
+padding: 2rem; /*margin interieur, plusieurs div ou elemnt*/
+/*
+
+/* dautre methode style
+border-color: red; /*autre type bordeur style*//*
+border-style: solid; plusier typ ligne voir détaille
+border-width: 10px;*/ 
+/*pour activer flexbox il faut utiliser display flex*/
+/*centrer ce dive , activer flexbox, centrer puis décendre*/
+display: flex; /*afin dutliser justyfay,
+ ça marche avec les div*/
+ /*flex-direction: column;/*pour afficher un audessous l autre*/
+justify-content: center; /*center div card sur la 
+ligne en horizontal*/
+/*10 /* justify-content: space-between; /*center div card sur la 
+ligne en horizontal, center entre deux dive */
+/*justify-content: space-around; /*center div card sur la 
+ligne en horizontal centerer gauche droite*/
+align-items: center; /*centre en verticale, si on tulise 
+justify et aligne sans activer flex box s'affiche rien*/
+flex-direction: column;
+}
+/*pour cree un autre div a l'interieur */
+.card{
+    /* width:30%; enlevé si responsive*/
+    /*height:70%; pour responsive*/
+    /*background-color:greenyellow;
+    margin-left: 2rem; /*espace entre deux dive
+    eviter d'utiler magin avec flex box*/
+   /* margin: 1rem; /*pour espace si un sous l'autre
+    mettre marge*/
+    border-radius: .2rem; /*pour aronder l'angle de
+     notre carée ou div*/ /*pour cercle witdh 10 height
+      10 et radius .5 ou bien w20  et h40 et rdius 100%*/
+     /*ombre cadre*/
+     box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);/*ombre sur div*/
+     display: flex; 
+     flex-direction: column;
+     align-items: center;
+}
+.logo{
+    margin-top: 1rem;
+width: 4rem;
+height: 2rem;
+   
+
+}
+.card input{
+    margin-top: 1rem;
+    border: 1px rgb(167, 167, 167) solid;
+    border-radius: .1rem; 
+    height: 1.9rem;
+    width: 70%;
+    /*text-align: center /*pour centrer le champs*/;
+}
+.card input:focus {
+    outline: none; /*eliminer effet dombre on focus sur input*/
+    border-color: blueviolet; /*on choisit le champs 
+    input la coleur chage de gray a bleuviolet*/
+}
+
+
+.card input::placeholder {
+font-size: .6rem; /*taille a linterieur input*/
+
+
+
+}
+.next {
+    margin-top: 1rem; /*5eme*/
+    border-radius: .2rem; /*4eme*/
+    height: 1.9rem; /*2eme chose a faire*/
+    width: 72%; /*1e chose a faire*/
+    background-color: rgb(73, 11, 243); /*3eme chose a faire*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    }
+
+    .next span{
+color: #ffffff;
+font-size: 1rem;
+font-weight: bold;
+    }
+    .next:hover{
+        background-color: rgb(89, 203, 231);
+    }
+
+
+    .open {
+        margin-top: 1rem; /*5eme*/
+        border-radius: .2rem; /*4eme*/
+        height: 1.9rem; /*2eme chose a faire*/
+        width: 72%; /*1e chose a faire*/
+        background-color: rgb(223, 223, 223); /*3eme chose a faire*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    
+        }
+    
+        .open span{
+    color: #2c2b2b;
+    font-size: 1rem;
+    font-weight: bold;
+        }
+        .open:hover{ /*pour changer couleur quand on selctionne
+             ce boutom*/
+            background-color: rgb(240, 226, 32);
+        }
+
+    .divider{
+        margin-top: 1rem;
+        width: 72%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        
+    }
+
+.left, .right{
+    border-bottom: solid rgb(155, 155, 155) 1px;
+width: 45%;
+}
+.divider span{
+    font-size: .5rem;
+    color: rgb(148, 148, 146);
+}
+
+.languges{
+    margin-top: 9rem;
+    width: 72%;
+    display: flex;
+
+}
+.flag{
+    width: .9rem;
+    height: .6rem; /*on peut utilisé px*/
+    cursor: pointer;
+
+}
+.icon{
+    margin-left: .2rem;
+    width: .4rem;
+    height: .4rem; /*on peut utilisé px*/
+    transform: rotate(90deg);
+    cursor: pointer;
+
+}
+
+.languges span{
+    margin-left: .2rem;
+    font-size: .5rem;
+}
+
+.pipe{
+    margin-left: .2rem;
+    height: .6rem;
+    border-left: 1px solid black;
+    
+}
+.footer{
+    background-color: rgb(228, 227, 226);
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer span{
+    margin-left: .6rem;
+    font-size: .8rem;
+    cursor: pointer;
+
+
+}
+.footer span:hover{
+    text-decoration: underline;
+}
